@@ -1,0 +1,94 @@
+/* Style pour l'en-tête */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+  }
+  
+  /* Style pour les titres de sections */
+  h2 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+  
+  /* Style pour le formulaire de création de tâche */
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  select,
+  input[type="number"] {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Style pour la liste de tâches */
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #a4a1a1;
+    font-size: 20px;
+  }
+  
+  td button {
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #366ff4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  td button:nth-child(2) {
+    background-color: #2196F3;
+  }
+  
+  td button:hover {
+    opacity: 0.8;
+  }
+  form {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="src/jquery-3.6.3.js"></script>
+
+</head>
+<body>    
+    <div id="contenu">
+        <div id="map"></div>
+    </div>
+
+    <div id="popup">
+        <div class="wrapper">
+            <a class="boutonfermer" value="X" name="close" id="close"></a>
+            <section class="form login">
+                <form action="#">
+                    <div class="field input">
+                        <p>Prendre un rendez-vous</p>
+                        <form>
+                          <input type="date" id="startTime">
+                          <div id="time-slots-container"></div>
+                          <button type="button" id="prendrerdv" class="btn btn-primary">Prendre rendez-vous</button>   
+                        </form>  
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="contenuProfil">
+        <div id="popup">
+            <div class="wrapper">
+                <a class="boutonfermer" value="X" name="close" id="closeProfil"></a>
+                <section class="form login">
+                    <form action="#">
+                        <div class="field input">
+                            <p>Profil</p>
+                            <table>
+                                <thead>
+                                  <tr>
+                                    <th>Médecin</th>
+                                    <th>Date Heure</th>
+                                    <th>Supprimer</th>
+                                    <th>Modifier</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="rdv">
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenuProfil">
+
+    </div>
+
+    <!-- <nav class="navbar fixed-top" id="pasconnecter">
+        <div class="container-fluid">
+            <a href="/PPE WEB/login.html" id="boutonconnecter">
+                <button type="button" class="btn btn-dark" >Se connecter</button>
+            </a>
+            <a href="/PPE WEB/register.html" id="boutonenregistrer">
+                <button type="button" class="btn btn-dark" >S'enregistrer</button>
+            </a>
+        </div>
+    </nav> -->
+
+    <nav class="navbar fixed-top" id="pasconnecter">
+        <div class="container-fluid">
+            <a href="/PPE WEB/login.html" id="boutonconnecter" class="ml-auto">
+                <button type="button" class="btn btn-dark">Se connecter</button>
+            </a>
+            <a href="/PPE WEB/register.html" id="boutonenregistrer">
+                <button type="button" class="btn btn-dark">S'enregistrer</button>
+            </a>
+        </div>
+
+       
+    </nav>
+      
+    <nav class="navbar fixed-top" id="connecter">
+        <div class="container-fluid">
+            <a href="#" id="boutondeco" class="ml-auto">
+                <button type="button" class="btn btn-dark">Déconnexion</button>
+            </a>
+            <a id="boutonprofil">
+                <button type="button" class="btn btn-dark">Profil</button>
+            </a>
+        </div>
+    </nav>
+    
+    <!-- js -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/profil.js"></script>
+
+</body>
+</html>

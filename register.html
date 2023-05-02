@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+        
+    <!-- Css -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script type="text/javascript" src="src/jquery-3.6.3.js"></script>
+</head>
+<body>
+
+
+   
+    <div class="wrapper">
+        <section class="form login">
+            <header>S'enregistrer en tant que patient</header>
+            <form action="#">
+                <div class="error-text">Erreur !</div>
+                <div class="field input">
+                    <label for="">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Entrez un prénom">
+
+                    <label for="">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Entrez un nom">
+
+                    <label for="">Adresse complète</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Entrez une adresse complète">
+
+                    <label for="">Code Postal</label>
+                    <input type="text" id="codepostal" name="codepostal" placeholder="Entrez un code postal">
+
+                    <label for="">Ville</label>
+                    <input type="text" id="ville" name="ville" placeholder="Entrez une ville">
+                
+                    <label for="">Téléphone</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="Entrez un téléphone">
+                
+                    <label for="">Nom d'utilisateur</label>
+                    <input type="text" id="login" name="login" placeholder="Entrez un d'utilisateur">
+
+                    <label for="">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="Entrez un mot de passe">
+
+                    <label for="">Retapez le mot de passe</label>
+                    <input type="password" id="password2" name="password2" placeholder="Retapez le mot de passe">
+                    <!-- <i class="fas fa-eye"></i> -->
+                </div>
+                
+                <div class="field button">
+                    <input type="button" id="enregistrer" value="S'enregistrer">
+
+                    <a class="field button" href="/PPE WEB/index.html">
+                        <input type="button"  id="connecter" value="Retour à l'accueil"></input>
+                    </a>
+
+                    <!-- </a> -->
+                </div>
+            </form>
+            <div class="link">Besoin de se connecter ? <a href="/PPE WEB/login.html">Se connecter</a></div>
+        </section>
+    </div>
+
+    <!-- js -->
+    <script type="text/javascript" src="js/register.js"></script>
+    
+</body>
+</html>

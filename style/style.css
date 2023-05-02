@@ -1,0 +1,284 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+  
+#map {
+    position: fixed; 
+    z-index: 0;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+}
+  
+/* Formulaire */
+
+.wrapper {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 16px;
+    background: #fff;  
+    position: relative;  
+    z-index: 1;  
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+      width: 150px;  
+      height: 150px;  
+    }
+}
+
+.form{
+    padding: 25px 30px;
+}
+.form header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.form form{
+    margin: 20px 0;
+}
+.form form .error-text{
+    color: #721c24;
+    /* background: #f8d7da; */
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+.form form .name-details{
+    display: flex;
+}
+.form .name-details .field:first-child{
+    margin-right: 10px;
+}
+.form .name-details .field:last-child{
+    margin-left: 10px;
+}
+.form form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    position: relative;
+
+    outline: none;
+    text-decoration: none; 
+}
+.form form .field label{
+    margin-bottom: 2px;
+}
+.form form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.form form .field input{
+    outline: none;
+}
+.form form .image input{
+    font-size: 17px;
+}
+.form form .button input{
+    height: 45px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 13px;     
+}
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    top: 70%;
+    color: #ccc;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.form form .field i.active::before{
+    color: #333;
+    content: "\f070";
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color: #333;
+}
+.form .link a:hover{
+    text-decoration: underline;
+}
+
+
+/* Afficher ou non le popup pour prendre Rdv */
+#contenu.afficher {
+    opacity: 0;
+    filter: blur(0px);
+}
+
+#contenu.masquer {
+    opacity: 0.7;
+    filter: blur(4px);
+}
+
+#popup {
+    display: none;
+}
+
+#popup.afficher {
+    display: block;
+}
+
+#popup.masquer {
+    display: none;
+}
+
+/* Afficher ou non le popul pour afficher le profil */
+
+#contenuProfil.afficher {
+    opacity: 0;
+    filter: blur(0px);
+}
+
+#contenuProfil.masquer {
+    opacity: 0.7;
+    filter: blur(4px);
+}
+
+#popupProfil {
+    display: none;
+  }
+  
+#popupProfil.afficher {
+    display: block;
+}
+
+#popupProfil.masquer {
+    display: none;
+}
+
+/* .boutonfermer {
+    background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    content: 'X';
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+} */
+
+.boutonfermer {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* Afficher bouton deconnexion et profil si connecter */
+
+#boutonconnecter {
+    display: block;
+}
+
+#boutonenregistrer {
+    display: block;
+}
+
+
+#boutonconnecter.masquer {
+    display: none;
+}
+
+#boutonenregistrer.masquer {
+    display: none;
+}
+
+/* #bouton.masquer {
+    display: none;
+} */
+
+#boutondeco {
+    display: block;
+}
+
+#boutonprofil {
+    display: block;
+}
+
+#boutondeco.masquer {
+    display: none;
+}
+
+#boutonprofil.masquer {
+    display: none;
+}
+
+/* bouton en haut de la page */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 100%;
+    z-index: 1030;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50px !important;
+}
+
+/* css pour liste déroulante des créneaux des rdv */
+
+#time-slots {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #333;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23333' d='M6 10l2-2 2 2h-4z'/%3E%3Cpath fill='%23333' d='M6 6l2-2 2 2H6z'/%3E%3Cpath fill='%23333' d='M10 10l2-2 2 2h-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: auto 60%;
+  }
+  
